@@ -5,8 +5,7 @@ public class LabRunner {
 	/**
 	 * Executes the program. Adds/searches/removes from a BST.
 	 * 
-	 * @param args
-	 *            this program accepts no args.
+	 * @param args this program accepts no args.
 	 */
 	public static void main(String[] args) {
 		// create the tree
@@ -20,6 +19,9 @@ public class LabRunner {
 
 		// add Anna to the tree
 		insertIntoBSTAndPrintResults(bst, new Person(111111111, "Anna"));
+
+		// Try adding Dr. Cooper to the tree again
+		insertIntoBSTAndPrintResults(bst, new Person(222222222, "Dr. Cooper"));
 
 		// add Mark to the tree
 		insertIntoBSTAndPrintResults(bst, new Person(333333333, "Mark"));
@@ -39,11 +41,17 @@ public class LabRunner {
 		// delete the person with NUID 555555555
 		deleteFromBSTAndPrintResults(bst, 555555555);
 
+		// try to delete the person with NUID 555555555 after they no longer exist
+		deleteFromBSTAndPrintResults(bst, 555555555);
+
 		// delete the person with NUID 222222222
 		deleteFromBSTAndPrintResults(bst, 222222222);
 
 		// delete the person with NUID 333333333
 		deleteFromBSTAndPrintResults(bst, 333333333);
+
+		// try to find person with NUID 333333333 after they've been deleted
+		searchInBSTAndPrintResults(bst, 333333333);
 
 		// delete the person with NUID 111111111
 		deleteFromBSTAndPrintResults(bst, 111111111);
@@ -59,51 +67,57 @@ public class LabRunner {
 	/**
 	 * Inserts a person into a BST and prints the results
 	 * 
-	 * @param bst
-	 *            the BST to insert a person into
-	 * @param person
-	 *            the person to insert into a BST
+	 * @param bst    the BST to insert a person into
+	 * @param person the person to insert into a BST
 	 */
 	private static void insertIntoBSTAndPrintResults(BinarySearchTree bst, Person person) {
-		// insert the person
-		bst.insert(person);
-		// print the results
-		System.out.println("Inserted the person with NUID " + person.key + ": ");
-		System.out.println("  " + person);
+		if (bst.search(person.key) != null) {
+			System.out.println("The person with NUID " + person.key + " already exists.\n");
+		} else {
+			// insert the person
+			bst.insert(person);
+			// print the results
+			System.out.println("Inserted the person with NUID " + person.key + ": ");
+			System.out.println("  " + person);
+		}
 		System.out.println(bst);
 	}
 
 	/**
 	 * Searches for a person based on a key in a BST and prints the results
 	 * 
-	 * @param bst
-	 *            the BST that might contain the person
-	 * @param key
-	 *            the key that uniquely identifies a person
+	 * @param bst the BST that might contain the person
+	 * @param key the key that uniquely identifies a person
 	 */
 	private static void searchInBSTAndPrintResults(BinarySearchTree bst, int key) {
 		// find the person with NUID key
 		Person found = bst.search(key);
-		// print the results
-		System.out.println("Found the person with NUID " + key + ": ");
-		System.out.println("  " + found);
+		if (found == null) {
+			System.out.println("Person with NUID " + key + " was not found.");
+		} else {
+			// print the results
+			System.out.println("Found the person with NUID " + key + ": ");
+			System.out.println("  " + found);
+		}
 		System.out.println(bst);
 	}
 
 	/**
 	 * Deletes a person based on a key from the BST and prints the results
 	 * 
-	 * @param bst
-	 *            the BST from which to delete the person
-	 * @param key
-	 *            the key that uniquely identifies a person
+	 * @param bst the BST from which to delete the person
+	 * @param key the key that uniquely identifies a person
 	 */
 	private static void deleteFromBSTAndPrintResults(BinarySearchTree bst, int key) {
 		// delete the person with NUID key
 		Person deleted = bst.delete(key);
 		// print the results
-		System.out.println("Deleted the person with NUID " + key + ": ");
-		System.out.println(" " + deleted);
+		if (deleted == null) {
+			System.out.println("Person with NUID " + key + " did not exist.");
+		} else {
+			System.out.println("Deleted the person with NUID " + key + ": ");
+			System.out.println(" " + deleted);
+		}
 		System.out.println(bst);
 	}
 }

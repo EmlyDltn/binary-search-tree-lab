@@ -1,0 +1,124 @@
+Inserted the person with NUID 555555555: 
+  NUID: 555555555  Name: Dr. Val
+Binary Search Tree of Size: 1
+  NUID: 555555555  Name: Dr. Val
+
+Inserted the person with NUID 222222222: 
+  NUID: 222222222  Name: Dr. Cooper
+Binary Search Tree of Size: 2
+  NUID: 222222222  Name: Dr. Cooper
+  NUID: 555555555  Name: Dr. Val
+
+Inserted the person with NUID 111111111: 
+  NUID: 111111111  Name: Anna
+Binary Search Tree of Size: 3
+  NUID: 111111111  Name: Anna
+  NUID: 222222222  Name: Dr. Cooper
+  NUID: 555555555  Name: Dr. Val
+
+The person with NUID 222222222 already exists.
+
+Binary Search Tree of Size: 3
+  NUID: 111111111  Name: Anna
+  NUID: 222222222  Name: Dr. Cooper
+  NUID: 555555555  Name: Dr. Val
+
+Inserted the person with NUID 333333333: 
+  NUID: 333333333  Name: Mark
+Binary Search Tree of Size: 4
+  NUID: 111111111  Name: Anna
+  NUID: 222222222  Name: Dr. Cooper
+  NUID: 333333333  Name: Mark
+  NUID: 555555555  Name: Dr. Val
+
+Inserted the person with NUID 777777777: 
+  NUID: 777777777  Name: Kylie
+Binary Search Tree of Size: 5
+  NUID: 111111111  Name: Anna
+  NUID: 222222222  Name: Dr. Cooper
+  NUID: 333333333  Name: Mark
+  NUID: 555555555  Name: Dr. Val
+  NUID: 777777777  Name: Kylie
+
+Inserted the person with NUID 666666666: 
+  NUID: 666666666  Name: Connor
+Binary Search Tree of Size: 6
+  NUID: 111111111  Name: Anna
+  NUID: 222222222  Name: Dr. Cooper
+  NUID: 333333333  Name: Mark
+  NUID: 555555555  Name: Dr. Val
+  NUID: 666666666  Name: Connor
+  NUID: 777777777  Name: Kylie
+
+Found the person with NUID 111111111: 
+  NUID: 111111111  Name: Anna
+Binary Search Tree of Size: 6
+  NUID: 111111111  Name: Anna
+  NUID: 222222222  Name: Dr. Cooper
+  NUID: 333333333  Name: Mark
+  NUID: 555555555  Name: Dr. Val
+  NUID: 666666666  Name: Connor
+  NUID: 777777777  Name: Kylie
+
+Found the person with NUID 555555555: 
+  NUID: 555555555  Name: Dr. Val
+Binary Search Tree of Size: 6
+  NUID: 111111111  Name: Anna
+  NUID: 222222222  Name: Dr. Cooper
+  NUID: 333333333  Name: Mark
+  NUID: 555555555  Name: Dr. Val
+  NUID: 666666666  Name: Connor
+  NUID: 777777777  Name: Kylie
+
+Deleted the person with NUID 555555555: 
+ NUID: 555555555  Name: Dr. Val
+Binary Search Tree of Size: 5
+  NUID: 111111111  Name: Anna
+  NUID: 222222222  Name: Dr. Cooper
+  NUID: 333333333  Name: Mark
+  NUID: 666666666  Name: Connor
+  NUID: 777777777  Name: Kylie
+
+Person with NUID 555555555 did not exist.
+Binary Search Tree of Size: 5
+  NUID: 111111111  Name: Anna
+  NUID: 222222222  Name: Dr. Cooper
+  NUID: 333333333  Name: Mark
+  NUID: 666666666  Name: Connor
+  NUID: 777777777  Name: Kylie
+
+Deleted the person with NUID 222222222: 
+ NUID: 222222222  Name: Dr. Cooper
+Binary Search Tree of Size: 4
+  NUID: 111111111  Name: Anna
+  NUID: 333333333  Name: Mark
+  NUID: 666666666  Name: Connor
+  NUID: 777777777  Name: Kylie
+
+Deleted the person with NUID 333333333: 
+ NUID: 333333333  Name: Mark
+Binary Search Tree of Size: 3
+  NUID: 111111111  Name: Anna
+  NUID: 666666666  Name: Connor
+  NUID: 777777777  Name: Kylie
+
+Person with NUID 333333333 was not found.
+Binary Search Tree of Size: 3
+  NUID: 111111111  Name: Anna
+  NUID: 666666666  Name: Connor
+  NUID: 777777777  Name: Kylie
+
+Deleted the person with NUID 111111111: 
+ NUID: 111111111  Name: Anna
+Binary Search Tree of Size: 2
+  NUID: 666666666  Name: Connor
+  NUID: 777777777  Name: Kylie
+
+Deleted the person with NUID 777777777: 
+ NUID: 777777777  Name: Kylie
+Binary Search Tree of Size: 1
+  NUID: 666666666  Name: Connor
+
+Deleted the person with NUID 666666666: 
+ NUID: 666666666  Name: Connor
+Binary Search Tree of Size: 0
